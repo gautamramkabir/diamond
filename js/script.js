@@ -65,7 +65,7 @@
 
 	// Title Icon Divider // SVG Code
 	if($('.divider').length){
-		$(".divider").append('<img src ="images/diamond-icon.png" alt="diamond" >');
+		$(".divider").append('<img src ="images/diamond-icon 1.png" alt="diamond" ><img src ="images/diamond-icon 2.png" alt="diamond" ><img src ="images/diamond-icon 3.png" alt="diamond" >');
 	}
 
 	// Mobile Navigation
@@ -251,6 +251,7 @@
 			margin:30,
 			nav:true,
 			smartSpeed: 400,
+			autoplayTimeout: 3000,
 			autoplay: true,
 			navText: [ '<span class="flaticon-left"></span>', '<span class="flaticon-right"></span>' ],
 			responsive:{
@@ -258,20 +259,51 @@
 					items:1
 				},
 				480:{
-					items:2
-				},
-				600:{
 					items:3
 				},
-				768:{
+				600:{
 					items:4
 				},
-				1280:{
+				768:{
 					items:5
+				},
+				1280:{
+					items:6
 				}
 			}
 		});
 	}
+
+
+		//Clients Carousel
+		if ($('.clients-carousel-two').length) {
+			$('.clients-carousel-two').owlCarousel({
+				loop:true,
+				margin:30,
+				nav:true,
+				smartSpeed: 400,
+				autoplayTimeout: 3000,
+				autoplay: true,
+				navText: [ '<span class="flaticon-left"></span>', '<span class="flaticon-right"></span>' ],
+				responsive:{
+					0:{
+						items:1
+					},
+					480:{
+						items:3
+					},
+					600:{
+						items:5
+					},
+					768:{
+						items:7
+					},
+					1280:{
+						items:9
+					}
+				}
+			});
+		}
 
 	//Client Testimonial Carousel
 	if ($('.client-testimonial-carousel').length && $('.client-thumbs-carousel').length) {
